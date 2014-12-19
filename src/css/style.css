@@ -1,0 +1,357 @@
+/*___________ TABLE OF CONTENTS_______________________________
+*
+* SVG PLEASE
+* Author: Vince Brown
+* Version: 1.0
+*
+*
+* _____________BASE________________________________________________
+*
+* 1.) Reset - reset style sheet 
+* 2.) Modular scale - modular scale for typography-- http://www.github.com/at-import/modular-scale
+* 3.) Susy - Import Susy Grid System
+* 4.) Susy Settings - Settings for Susy grid system -- http://susy.readthedocs.org/en/latest/settings/
+* 5.) Config - Global variables for Font stacks, font weights, color palettes, breakpoints..
+* 6.) Functions - Global functions,  px -> em, color palettes, 
+* 7.) Helpers - Helper classes such as srt(screen reading text), and extends like clearfix and psuedo elements
+* 8.) Mixins - Global mixins such as mq - for named breakpoints
+* 9.) Base - Base Element Styles - typography , box-sizing
+*
+*
+* ___________LAYOUT________________________________________________
+*
+*
+*
+*
+*
+* ___________MODULES________________________________________________
+* 
+* 1.) Buttons - Styles for all buttons and modifiers of buttons
+*
+*
+*
+*
+*
+* ?.) Site-Footer - Styles for content in Site footer - Social Links, Rss, Copyright
+*
+*
+*
+* ____________STATE________________________________________________
+*
+*
+*
+*
+*
+*
+*
+*________END OF TABLE OF CONTENTS - START STYLES BELOW_______________________________________
+*___________________________________________________________________________________________________*/
+/* Reset Styles
+*******************************************************/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+img {
+  border: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Helper Classes & Extends
+*******************************************************/
+.site-wrapper:after, .main-nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.srt {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.site-wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+  position: relative;
+}
+@media screen and (min-width: 50em) {
+  .site-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 65em) {
+  .site-wrapper {
+    width: 100%;
+  }
+}
+
+.main-nav__link--articles:before, .main-nav__link--books:before, .main-nav__link--tutorials:before, .main-nav__link--podcasts:before, .main-nav__link--talks:before, .main-nav__link--tools:before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top: -2px;
+  top: 0;
+  left: 0;
+}
+
+/* Base Styles
+*******************************************************/
+body {
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+  font-size: 100%;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+@media screen and (min-width: 20em) {
+  body {
+    font-size: 106.3%;
+  }
+}
+@media screen and (min-width: 37.5em) {
+  body {
+    font-size: 112.5%;
+  }
+}
+@media screen and (min-width: 50em) {
+  body {
+    font-size: 125%;
+  }
+}
+@media screen and (min-width: 65em) {
+  body {
+    font-size: 137.5%;
+  }
+}
+@media screen and (min-width: 81em) {
+  body {
+    font-size: 150%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 1.30902em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 0.80902em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 0.80902em;
+}
+
+h4 {
+  font-size: 0.7em;
+}
+
+h5 {
+  font-size: 0.7em;
+}
+
+h6 {
+  font-size: 0.5em;
+}
+
+p, ul, ol, pre, table, blockquote {
+  font-size: 0.7em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+code {
+  font-size: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+
+input,
+textarea {
+  font-weight: 300;
+  color: #212121;
+  font-size: 0.7em;
+}
+
+/* main-nav Styles
+*******************************************************/
+.logo {
+  display: inline-block;
+  width: 43%;
+  margin: 1em 0 1em 1.3em;
+}
+@media screen and (min-width: 37.5em) {
+  .logo {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .logo {
+    width: 25%;
+    max-width: 325px;
+  }
+}
+.logo a {
+  display: block;
+  width: 100%;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-nav__link--articles, .main-nav__link--books, .main-nav__link--tutorials, .main-nav__link--podcasts, .main-nav__link--talks, .main-nav__link--tools {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 3px;
+  font-weight: 300;
+  color: #212121;
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+@media screen and (min-width: 37.5em) {
+  .main-nav__link--articles, .main-nav__link--books, .main-nav__link--tutorials, .main-nav__link--podcasts, .main-nav__link--talks, .main-nav__link--tools {
+    box-sizing: border-box;
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    padding: 1.5rem 0;
+  }
+}
+
+header {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  z-index: 2;
+}
+
+.main-nav {
+  width: 100%;
+  clear: both;
+}
+.main-nav__link--articles:hover {
+  background-color: #673AB7;
+  color: #fff;
+  font-weight: 400;
+}
+.main-nav__link--articles:before {
+  background-color: #673AB7;
+}
+.main-nav__link--books:hover {
+  background-color: #009688;
+  color: #fff;
+  font-weight: 400;
+}
+.main-nav__link--books:before {
+  background-color: #009688;
+}
+.main-nav__link--tutorials:hover {
+  background-color: #F44336;
+  color: #fff;
+  font-weight: 400;
+}
+.main-nav__link--tutorials:before {
+  background-color: #F44336;
+}
+.main-nav__link--podcasts:hover {
+  background-color: #2196F3;
+  color: #fff;
+  font-weight: 400;
+}
+.main-nav__link--podcasts:before {
+  background-color: #2196F3;
+}
+.main-nav__link--talks:hover {
+  background-color: #00BCD4;
+  color: #fff;
+  font-weight: 400;
+}
+.main-nav__link--talks:before {
+  background-color: #00BCD4;
+}
+.main-nav__link--tools:hover {
+  background-color: #E91E63;
+  color: #fff;
+  font-weight: 400;
+}
+.main-nav__link--tools:before {
+  background-color: #E91E63;
+}
+
+.btn-contrib {
+  display: inline-block;
+  width: auto;
+  padding: .9em 1em;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  border-radius: .2em;
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-contrib {
+  margin: 1em 1.3em 1em 0;
+  background-color: #2196F3;
+  float: right;
+  z-index: 3;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.btn-contrib:active {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}

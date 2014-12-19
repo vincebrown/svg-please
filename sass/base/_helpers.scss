@@ -1,0 +1,76 @@
+/* Helper Classes & Extends
+*******************************************************/
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Screen reader text
+
+.srt {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Center alignment
+
+%center-text {
+  text-align: center;
+}
+
+%center-align {
+  margin: 0 auto;
+}
+
+
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.site-wrapper {
+  margin:0 auto; 
+  max-width: 1600px;
+  position: relative;
+  @extend %clearfix;
+  @include mq(md) {
+    width: 100%;
+  }
+  @include mq(lg) {
+    width: 100%;
+  }
+}
+
+%pseudo {
+  display: block;
+  content: ''; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+%pseudo-border {
+  display: block;
+  content: ''; 
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top:-2px;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,73 @@
+/* Base Styles
+*******************************************************/
+body {
+  transition: all $trns-dur;
+  font-size:100%;
+  font-family: $font-family--primary;
+  line-height: 1.5;
+  // 320px
+  @include mq(xs) { 
+    font-size: 106.3%; 
+  }
+  @include mq(sm) {
+    font-size: 112.5%; 
+  }
+  @include mq(md) {
+    font-size: 125%;
+  }
+  @include mq(lg) {
+    font-size: 137.5%;
+  }
+  @include mq(xl) {
+    font-size: 150%;
+  }
+  
+}
+h1,h2,h3,h4,h5,h6 {
+  letter-spacing: $letter-space;
+}
+
+h1 {
+  font-size: ms(4);
+  font-weight: $font-weight--bold;
+}
+
+h2 {
+  font-size: ms(2);
+  font-weight: $font-weight--bold;
+}
+
+h3 { font-size: ms(2); }
+
+h4 { font-size: ms(1); }
+
+h5{ 
+  font-size: ms(1); 
+}
+h6{
+  font-size: ms(0);
+}
+
+p, ul, ol, pre, table, blockquote {
+  font-size: ms(1);
+  font-weight: $font-weight--norm;
+  line-height: 1.5;
+
+}
+code{
+  font-size: ms(0);
+}
+
+a {
+  text-decoration: none;
+  color: palette(text);
+}
+
+input,
+textarea {
+  font-weight: $font-weight--light;
+  color: palette(text);
+  font-size: ms(1);
+}
+
+

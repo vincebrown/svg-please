@@ -1,0 +1,10 @@
+// Susy Grid Settings
+  // 12 column grid , max-width:1260px , 1/4 gutters positioned inside.
+
+$susy: (
+  columns: 12, 
+  gutters: 1/4,
+  gutter-position: inside,
+  container: 1260px,
+  container-position: center,
+);

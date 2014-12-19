@@ -1,0 +1,116 @@
+//________________Configuration__________________________________________
+
+// Font Stacks
+
+$font-family--primary :'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--thin    : 100;
+$font-weight--light   : 300;
+$font-weight--norm  : 400;
+$font-weight--medium : 500;
+$font-weight--bold    : 700;
+$font-weight--ultra-bold : 900;
+
+// Base Colors
+
+$white  : #fff;
+$black  : #000000;
+
+// Main Color Palette
+$deep-purple : #673AB7; // Articles
+$teal : #009688; // Books
+$red: #F44336; // Tutorials
+$blue: #2196F3; // Podcasts
+$pink : #E91E63; // Talks
+$cyan:#00BCD4; // Tools
+
+
+
+
+// Color Palettes
+
+$color-palettes : (
+  text : (
+    primary : #212121,
+    secondary : #727272,
+    divider : #B6B6B6,
+    ),  
+  icons : (
+    active : rgba(0,0,0,.54),
+    inactive : rgba(0,0,0, .26),
+    ),
+  purple : (
+    light : #D1C4E9,
+    primary: $deep-purple,
+    dark : #512DA8,
+    ),
+  teal : (
+    light : #B2DFDB,
+    primary: $teal,
+    dark : #00796B,
+    ),
+  red : (
+    light : #FFCDD2,
+    primary: $red,
+    dark : #D32F2F,
+    ),
+  blue : (
+    light : #BBDEFB,
+    primary: $blue,
+    dark : #1976D2,
+    ),
+  pink : (
+    light : #F8BBD0,
+    primary: $pink,
+    dark : #C2185B,
+    ),
+  cyan : (
+    light : #B2EBF2,
+    primary: $cyan,
+    dark : #0097A7,
+    ),
+); // end $color-palettes
+
+
+
+// Typogrpahy Grid  -- Using modular scale
+
+$ms-base: .5em .7em ;
+$ms-ratio: $golden;
+$letter-space: 1px;
+$letter-space--tight:-1px;
+$letter-space--loose: 3px;
+
+// Border Radius
+$br--default  : 3px;
+$br--round  : 50%;
+
+
+// Transitions
+$trns-dur : .2s;
+$trns-time: cubic-bezier(.4,0,.2,1);
+
+
+// Material Shadow Depths
+$z1-before: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+$z1-after : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+$z2-before: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$z2-after : 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+
+
+// Breakpoints
+  // xs    => 320px
+  // sm   => 600px 
+  // md   => 800px
+  // lg     => 1040px
+  // xl     => 1200px
+  
+  $break-points: (
+    xs  : 20em, 
+    sm : 37.5em,
+    md : 50em,
+    lg   : 65em,
+    xl   : 81em
+    );

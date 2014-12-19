@@ -1,0 +1,18 @@
+//________________Functions__________________________________________
+
+// Calculate em values
+
+@function em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+
+
+// Call the color palette modifiers in color values
+@function palette($palette, $shade: 'primary') {
+  @return map-get(map-get($color-palettes, $palette), $shade);
+}
+
+// Call the breakpoints from breakpoint map
+@function  bkpt($breakpoint) {
+  @return map-get($break-points, $breakpoint);
+}

@@ -1,0 +1,55 @@
+//________________Global Mixins__________________________________________
+
+
+// BEM selectors
+
+// block__element
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+// block__element--modifier
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == "xs" {
+    @media screen and ( min-width: bkpt(xs) ) {
+      @content;
+    }
+  }
+  @else if $break == "sm" {
+    @media screen and ( min-width: bkpt(sm) ) {
+      @content;
+    }
+  }
+  @else if $break == "md" {
+    @media screen and ( min-width: bkpt(md) ) {
+      @content;
+    }
+  }
+  @else if $break == "lg" {
+    @media screen and ( min-width: bkpt(lg) ) {
+      @content;
+    }
+  }
+  @else if $break == "xl" {
+    @media screen and ( min-width: bkpt(xl) ) {
+      @content;
+    }
+  }
+  @else {
+    @media screen and ( min-width: $break ) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+/* main-nav Styles
+*******************************************************/
+.logo {
+  display: inline-block;
+  width: 43%;
+  margin:1em 0 1em 1.3em;
+  @include mq(sm) {
+    width: 35%; 
+  }
+  @include mq(md) {
+    width: 25%; 
+    max-width:325px;
+  }
+  a{
+    display: block;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+%main-nav-link {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: ms(1);
+  letter-spacing: $letter-space--loose;
+  font-weight: $font-weight--light;
+  color:palette(text);
+  transition: all $trns-dur $trns-time;
+  @include span(4 of 12);
+  @include mq(sm) {
+    @include span(2 of 12);
+    padding:1.5rem 0;
+  }
+}
+
+header {
+  box-shadow: $z1-after;
+  z-index:2;
+}
+.main-nav {
+  width: 100%;
+  @extend %clearfix;
+  clear:both;
+  // .main-nav__link--(mod)
+  @include e('link') {
+    @include m('articles') {
+      @extend %main-nav-link;
+      &:hover {
+        background-color: palette(purple);
+        color:$white;
+        font-weight: $font-weight--norm;
+      }
+      &:before{
+        @extend %pseudo-border;
+        background-color: palette(purple);
+      }
+    }
+    @include m('books') {
+      @extend %main-nav-link;
+      &:hover {
+        background-color: palette(teal);
+        color:$white;
+        font-weight: $font-weight--norm;
+      }
+      &:before{
+        @extend %pseudo-border;
+        background-color: palette(teal);
+      }
+    }
+    @include m('tutorials') {
+      @extend %main-nav-link;
+      &:hover {
+        background-color: palette(red);
+        color:$white;
+        font-weight: $font-weight--norm;
+      }
+      &:before{
+        @extend %pseudo-border;
+        background-color: palette(red);
+      }
+    }
+    @include m('podcasts') {
+      @extend %main-nav-link;
+      &:hover {
+        background-color: palette(blue);
+        color:$white;
+        font-weight: $font-weight--norm;
+      }
+      &:before{
+        @extend %pseudo-border;
+        background-color: palette(blue);
+      }
+    }
+    @include m('talks') {
+      @extend %main-nav-link;
+      &:hover {
+        background-color: palette(cyan);
+        color:$white;
+        font-weight: $font-weight--norm;
+      }
+      &:before{
+        @extend %pseudo-border;
+        background-color: palette(cyan);
+      }
+    }
+    @include m('tools') {
+      @extend %main-nav-link;
+      &:hover {
+        background-color: palette(pink);
+        color:$white;
+        font-weight: $font-weight--norm;
+      }
+      &:before{
+        @extend %pseudo-border;
+        background-color: palette(pink);
+      }
+    }
+  }
+}
