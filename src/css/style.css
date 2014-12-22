@@ -492,7 +492,7 @@ header {
   padding: 2.25em 1.8em 2em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-.resource__meta {
+.resource__meta > h3 {
   padding: 1em 1.8em;
 }
 .resource__title {
@@ -507,11 +507,20 @@ header {
   line-height: 1.4;
   font-size: .8em;
 }
+@media screen and (min-width: 75em) {
+  .resource__summ {
+    font-size: .7em;
+  }
+}
 .resource__meta-info {
   color: #727272;
   font-weight: 400;
   font-size: .75em;
-  margin-bottom: 1rem;
+}
+@media screen and (min-width: 75em) {
+  .resource__meta-info {
+    font-size: .65em;
+  }
 }
 .resource__meta-info span {
   font-size: .95em;
@@ -558,6 +567,9 @@ header {
 .resource--book .resource__recommended {
   background-color: #673AB7;
 }
+.resource--book .resource__meta h3:first-child {
+  border-bottom: 1px solid #B6B6B6;
+}
 
 .resource--tutorial {
   border-color: #D32F2F;
@@ -570,6 +582,9 @@ header {
 }
 .resource--tutorial .resource__recommended {
   background-color: #009688;
+}
+.resource--tutorial .resource__meta h3:first-child {
+  border-bottom: 1px solid #B6B6B6;
 }
 
 .resource--podcast {
@@ -584,6 +599,9 @@ header {
 .resource--podcast .resource__recommended {
   background-color: #009688;
 }
+.resource--podcast .resource__meta h3:first-child {
+  border-bottom: 1px solid #B6B6B6;
+}
 
 .resource--talk {
   border-color: #0097A7;
@@ -597,6 +615,9 @@ header {
 .resource--talk .resource__recommended {
   background-color: #009688;
 }
+.resource--talk .resource__meta h3:first-child {
+  border-bottom: 1px solid #B6B6B6;
+}
 
 .resource--tool {
   border-color: #C2185B;
@@ -609,4 +630,7 @@ header {
 }
 .resource--tool .resource__recommended {
   background-color: #009688;
+}
+.resource--tool .resource__meta h3:first-child {
+  border-bottom: 1px solid #B6B6B6;
 }

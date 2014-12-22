@@ -74,7 +74,9 @@
   }
   // .resource__meta
   @include e('meta'){
-    padding: 1em 1.8em;
+    & > h3{
+      padding: 1em 1.8em;
+    }
   }
   // .resource__title
   @include e('title') {
@@ -89,13 +91,18 @@
     font-weight: $font-weight--light;
     line-height: 1.4;
     font-size: .8em;
+    @include mq(lg){
+      font-size: .7em;
+    }
   }
   // .resource__author
   @include e('meta-info'){
     color:palette(text,secondary);
     font-weight: $font-weight--norm;
     font-size: .75em;
-    margin-bottom: 1rem;
+    @include mq(lg){
+      font-size: .65em;
+    }
     span{
       font-size: .95em;
       font-weight: inherit;
@@ -147,6 +154,9 @@
   .resource__recommended {
     background-color: palette(purple);
   }
+  .resource__meta h3:first-child{
+    border-bottom:1px solid palette(text,divider);
+  }
 }
 // Style overides for tutorial resources
 .resource--tutorial {
@@ -161,6 +171,9 @@
   }
   .resource__recommended {
     background-color: palette(teal);
+  }
+  .resource__meta h3:first-child{
+    border-bottom:1px solid palette(text,divider);
   }
 }
 // Style overides for podcast resources
@@ -177,6 +190,9 @@
   .resource__recommended {
     background-color: palette(teal);
   }
+  .resource__meta h3:first-child{
+    border-bottom:1px solid palette(text,divider);
+  }
 }
 // Style overides for talk resources
 .resource--talk {
@@ -192,6 +208,9 @@
   .resource__recommended {
     background-color: palette(teal);
   }
+  .resource__meta h3:first-child{
+    border-bottom:1px solid palette(text,divider);
+  }
 }
 // Style overides for tool resources
 .resource--tool {
@@ -206,6 +225,9 @@
   }
   .resource__recommended {
     background-color: palette(teal);
+  }
+  .resource__meta h3:first-child{
+    border-bottom:1px solid palette(text,divider);
   }
 }
 

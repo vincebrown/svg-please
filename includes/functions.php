@@ -105,8 +105,8 @@ function ripple_color($type) {
  */
 function show_resources($db,$type='article',$plural='articles') { ?>
 <section class="resource-section <?php echo $plural; ?>">
-  <h2 class="section__header"><?php echo $plural; ?></h2>
-  <p class="section__summary"><?php echo $plural ?> that have been written about SVG.</p>
+  <h2 class="section__header"><?php echo ucwords($plural); ?></h2>
+  <p class="section__summary"><?php echo ucwords($plural) ?> that have been written about SVG.</p>
   <ul class="resources">
     <?php 
     $query_resources = "SELECT *
