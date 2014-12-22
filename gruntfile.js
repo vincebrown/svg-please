@@ -128,8 +128,8 @@ module.exports = function(grunt) {
         tasks: ['sass','autoprefixer','cssmin']
       },
       scripts: {
-        files: 'src/**/*.js',
-        tasks: ['jshint', 'uglify']
+        files: 'src/js/*.js',
+        tasks: ['uglify']
       },
       svg:{
         files: ['src/**/*.svg'],

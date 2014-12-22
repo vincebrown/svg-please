@@ -53,3 +53,35 @@
     }
   }
 }
+
+
+// Material Shadows
+@mixin shadow($depth) {
+  @if $depth == "z1" {
+    box-shadow:ms(z1);
+  }
+  @else if $depth == "z2" {
+    box-shadow:ms(z2);
+  }
+  @else if $depth == "z3" {
+    box-shadow:ms(z3);
+  }
+  @else if $depth == "z4" {
+    box-shadow:ms(z4);
+  }
+  @else if $depth == "z5" {
+    box-shadow:ms(z5);
+  }
+  @else if $depth == "btn-norm" {
+    box-shadow:ms(btn-norm);
+  }
+  @else if $depth == "btn-hover" {
+    box-shadow:ms(btn-hover);
+  }
+  @else if $depth == "btn-focus" {
+   box-shadow:ms(btn-focus);
+  }
+  @else if $depth == "btn-active" {
+    box-shadow:ms(btn-active);
+  }
+}

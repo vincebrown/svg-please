@@ -8,14 +8,13 @@
 * _____________BASE________________________________________________
 *
 * 1.) Reset - reset style sheet 
-* 2.) Modular scale - modular scale for typography-- http://www.github.com/at-import/modular-scale
-* 3.) Susy - Import Susy Grid System
-* 4.) Susy Settings - Settings for Susy grid system -- http://susy.readthedocs.org/en/latest/settings/
-* 5.) Config - Global variables for Font stacks, font weights, color palettes, breakpoints..
-* 6.) Functions - Global functions,  px -> em, color palettes, 
-* 7.) Helpers - Helper classes such as srt(screen reading text), and extends like clearfix and psuedo elements
-* 8.) Mixins - Global mixins such as mq - for named breakpoints
-* 9.) Base - Base Element Styles - typography , box-sizing
+* 2.) Susy - Import Susy Grid System
+* 3.) Susy Settings - Settings for Susy grid system -- http://susy.readthedocs.org/en/latest/settings/
+* 4.) Config - Global variables for Font stacks, font weights, color palettes, breakpoints..
+* 5.) Functions - Global functions,  px -> em, color palettes, 
+* 6.) Helpers - Helper classes such as srt(screen reading text), and extends like clearfix and psuedo elements
+* 7.) Mixins - Global mixins such as mq - for named breakpoints
+* 8.) Base - Base Element Styles - typography , box-sizing
 *
 *
 * ___________LAYOUT________________________________________________
@@ -98,6 +97,10 @@ samp {
   width: 1px;
 }
 
+.resource-section {
+  margin: 0 auto;
+}
+
 .hide-text {
   text-indent: 100%;
   white-space: nowrap;
@@ -106,7 +109,7 @@ samp {
 
 .site-wrapper {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1950px;
   position: relative;
 }
 @media screen and (min-width: 50em) {
@@ -118,17 +121,6 @@ samp {
   .site-wrapper {
     width: 100%;
   }
-}
-
-.main-nav__link--articles:before, .main-nav__link--books:before, .main-nav__link--tutorials:before, .main-nav__link--podcasts:before, .main-nav__link--talks:before, .main-nav__link--tools:before {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  margin-top: -2px;
-  top: 0;
-  left: 0;
 }
 
 /* Base Styles
@@ -171,39 +163,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.30902em;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 0.80902em;
   font-weight: 700;
 }
 
-h3 {
-  font-size: 0.80902em;
-}
-
-h4 {
-  font-size: 0.7em;
-}
-
-h5 {
-  font-size: 0.7em;
-}
-
-h6 {
-  font-size: 0.5em;
-}
-
 p, ul, ol, pre, table, blockquote {
-  font-size: 0.7em;
   font-weight: 400;
   line-height: 1.5;
-}
-
-code {
-  font-size: 0.5em;
 }
 
 a {
@@ -215,7 +184,6 @@ input,
 textarea {
   font-weight: 300;
   color: #212121;
-  font-size: 0.7em;
 }
 
 /* main-nav Styles
@@ -251,7 +219,8 @@ textarea {
   text-align: center;
   padding: 1rem 0;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: .8em;
+  border-top: 2px solid #000;
   letter-spacing: 3px;
   font-weight: 300;
   color: #212121;
@@ -275,74 +244,79 @@ textarea {
 }
 
 header {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   z-index: 2;
+  margin-bottom: 2.25rem;
 }
 
 .main-nav {
   width: 100%;
   clear: both;
 }
+.main-nav__link--articles {
+  border-color: #673AB7;
+}
 .main-nav__link--articles:hover {
   background-color: #673AB7;
   color: #fff;
   font-weight: 400;
 }
-.main-nav__link--articles:before {
-  background-color: #673AB7;
+.main-nav__link--books {
+  border-color: #009688;
 }
 .main-nav__link--books:hover {
   background-color: #009688;
   color: #fff;
   font-weight: 400;
 }
-.main-nav__link--books:before {
-  background-color: #009688;
+.main-nav__link--tutorials {
+  border-color: #F44336;
 }
 .main-nav__link--tutorials:hover {
   background-color: #F44336;
   color: #fff;
   font-weight: 400;
 }
-.main-nav__link--tutorials:before {
-  background-color: #F44336;
+.main-nav__link--podcasts {
+  border-color: #2196F3;
 }
 .main-nav__link--podcasts:hover {
   background-color: #2196F3;
   color: #fff;
   font-weight: 400;
 }
-.main-nav__link--podcasts:before {
-  background-color: #2196F3;
+.main-nav__link--talks {
+  border-color: #00BCD4;
 }
 .main-nav__link--talks:hover {
   background-color: #00BCD4;
   color: #fff;
   font-weight: 400;
 }
-.main-nav__link--talks:before {
-  background-color: #00BCD4;
+.main-nav__link--tools {
+  border-color: #E91E63;
 }
 .main-nav__link--tools:hover {
   background-color: #E91E63;
   color: #fff;
   font-weight: 400;
 }
-.main-nav__link--tools:before {
-  background-color: #E91E63;
-}
 
+/* btn Styles
+*******************************************************/
 .btn-contrib {
+  position: relative;
   display: inline-block;
   width: auto;
   padding: .9em 1em;
   font-weight: 500;
   color: white;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: .75em;
   border-radius: .2em;
   -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
           transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 .btn-contrib {
@@ -350,8 +324,175 @@ header {
   background-color: #2196F3;
   float: right;
   z-index: 3;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.17), 0 1px 4px rgba(0, 0, 0, 0.16);
+}
+.btn-contrib:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 4px rgba(0, 0, 0, 0.16);
 }
 .btn-contrib:active {
-  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.09), 0 7px 6px rgba(0, 0, 0, 0.16);
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ripple {
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+  -webkit-animation: ripple-animation 1.25s;
+          animation: ripple-animation 1.25s;
+}
+
+@-webkit-keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+    opacity: 0;
+  }
+}
+/* resource section Styles
+*******************************************************/
+.resource-section {
+  width: 90%;
+}
+
+.section__header {
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #212121;
+}
+
+.section__summary {
+  color: #727272;
+  font-weight: 300;
+  font-size: .85em;
+}
+
+.articles .section__header {
+  color: #673AB7;
+}
+
+.resource--article {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  list-style-type: none;
+  border-top: 15px solid #000000;
+  margin-bottom: 1.75rem;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+@media screen and (min-width: 37.5em) {
+  .resource--article {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .resource--article {
+    float: left;
+    margin-right: 3%;
+    width: 46%;
+  }
+}
+@media screen and (min-width: 81em) {
+  .resource--article {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+  }
+}
+.resource--article:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.resources {
+  list-style-type: none;
+  margin-top: 2.25rem;
+}
+@media screen and (min-width: 50em) {
+  .resources li:nth-child(odd) {
+    clear: both;
+  }
+  .resources li:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 65em) {
+  .resources li:nth-child(3n+1) {
+    clear: none;
+  }
+}
+@media screen and (min-width: 81em) {
+  .resources li:nth-child(2n+1) {
+    clear: none;
+  }
+}
+
+.resource__main-info {
+  padding: 3em 2.25em 2.75em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.resource__meta {
+  padding: 1em 2.25em;
+}
+.resource__title {
+  font-size: 1.3em;
+  line-height: 1.2;
+  font-weight: 300;
+  color: white;
+  margin-bottom: .25em;
+}
+.resource__summ {
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: .9em;
+}
+.resource__author {
+  color: #727272;
+  font-weight: 400;
+  font-size: .85em;
+}
+.resource__author span {
+  font-size: .85em;
+  font-weight: inherit;
+  display: block;
+  color: #212121;
+}
+
+.resource--article {
+  border-color: #512DA8;
+}
+.resource--article .resource__main-info {
+  background-color: #673AB7;
+}
+.resource--article .resource__summ {
+  color: #D1C4E9;
 }

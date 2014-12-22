@@ -27,7 +27,8 @@
   text-align: center;
   padding: 1rem 0;
   text-transform: uppercase;
-  font-size: ms(1);
+  font-size: .8em;
+  border-top:2px solid #000;
   letter-spacing: $letter-space--loose;
   font-weight: $font-weight--light;
   color:palette(text);
@@ -40,8 +41,9 @@
 }
 
 header {
-  box-shadow: $z1-after;
+  @include shadow(z1);
   z-index:2;
+  margin-bottom: 2.25rem;
 }
 .main-nav {
   width: 100%;
@@ -51,75 +53,61 @@ header {
   @include e('link') {
     @include m('articles') {
       @extend %main-nav-link;
+      border-color: palette(purple);
       &:hover {
         background-color: palette(purple);
         color:$white;
         font-weight: $font-weight--norm;
-      }
-      &:before{
-        @extend %pseudo-border;
-        background-color: palette(purple);
       }
     }
     @include m('books') {
       @extend %main-nav-link;
+      border-color: palette(teal);
       &:hover {
         background-color: palette(teal);
         color:$white;
         font-weight: $font-weight--norm;
-      }
-      &:before{
-        @extend %pseudo-border;
-        background-color: palette(teal);
       }
     }
     @include m('tutorials') {
       @extend %main-nav-link;
+      border-color: palette(red);
       &:hover {
         background-color: palette(red);
         color:$white;
         font-weight: $font-weight--norm;
       }
-      &:before{
-        @extend %pseudo-border;
-        background-color: palette(red);
-      }
+      
     }
     @include m('podcasts') {
       @extend %main-nav-link;
+      border-color: palette(blue);
       &:hover {
         background-color: palette(blue);
         color:$white;
         font-weight: $font-weight--norm;
       }
-      &:before{
-        @extend %pseudo-border;
-        background-color: palette(blue);
-      }
+      
     }
     @include m('talks') {
       @extend %main-nav-link;
+      border-color: palette(cyan);
       &:hover {
         background-color: palette(cyan);
         color:$white;
         font-weight: $font-weight--norm;
       }
-      &:before{
-        @extend %pseudo-border;
-        background-color: palette(cyan);
-      }
+      
     }
     @include m('tools') {
       @extend %main-nav-link;
+      border-color: palette(pink);
       &:hover {
         background-color: palette(pink);
         color:$white;
         font-weight: $font-weight--norm;
       }
-      &:before{
-        @extend %pseudo-border;
-        background-color: palette(pink);
-      }
+      
     }
   }
 }

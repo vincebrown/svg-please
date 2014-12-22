@@ -16,3 +16,7 @@
 @function  bkpt($breakpoint) {
   @return map-get($break-points, $breakpoint);
 }
+
+@function ms($material-shadow) {
+  @return map-get($material-shadows, $material-shadow);
+}

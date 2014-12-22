@@ -1,0 +1,23 @@
+/* resource section Styles
+*******************************************************/
+.resource-section{
+  width: 90%;
+  @extend %center-align;
+}
+
+.section__header{
+  font-weight: $font-weight--medium;
+  font-size: 1.125em;
+  color:palette(text);
+}
+.section__summary{
+  color:palette(text,secondary);
+  font-weight: $font-weight--light;
+  font-size: .85em;
+}
+
+.articles {
+  .section__header{
+    color:palette(purple);
+  }
+}

@@ -1,0 +1,99 @@
+%resource{
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  width: 90%;
+  margin:0 auto;
+  list-style-type: none;
+  border-top: 15px solid $black;
+  margin-bottom: 1.75rem;
+  border-radius: 3px;
+  transition:all $trns-dur $trns-time;
+  @include shadow(z1);
+  @include mq(sm) {
+    width: 80%;
+  }
+  @include mq(md) {
+    float:left;
+    margin-right:3%;
+    width: 46%;
+  }
+  @include mq(xl) {
+    float:left;
+    width: 30%;
+    margin-right:3%;
+  }
+  &:hover {
+    @include shadow(z3);
+  }
+}
+
+.resources {
+  list-style-type: none;
+  margin-top:2.25rem;
+  li {
+    @include mq(md) {
+      &:nth-child(odd){
+        clear:both;
+      }
+      &:nth-child(even){
+        margin-right: 0;
+      }
+    }
+    @include mq(lg){
+      &:nth-child(3n+1){
+        clear:none;
+      }
+    }
+    @include mq(xl){
+      &:nth-child(2n+1){
+        clear:none;
+      }
+    }
+  }
+}
+.resource{
+  @include e('main-info'){
+    padding: 3em 2.25em 2.75em;
+    @include shadow(z1);
+  }
+  @include e('meta'){
+    padding: 1em 2.25em;
+  }
+  @include e('title') {
+    font-size: 1.3em;
+    line-height: 1.2;
+    font-weight: $font-weight--light;
+    color:white;
+    margin-bottom: .25em;
+  }
+  @include e('summ'){
+    font-weight: $font-weight--light;
+    line-height: 1.4;
+    font-size: .9em;
+  }
+  @include e('author'){
+    color:palette(text,secondary);
+    font-weight: $font-weight--norm;
+    font-size: .85em;
+    span{
+      font-size: .85em;
+      font-weight: inherit;
+      display:block;
+      color:palette(text);
+    }
+  }
+}
+.resource--article {
+  @extend %resource;
+  border-color: palette(purple,dark);
+
+  .resource__main-info{
+    background-color: palette(purple);
+  }
+  .resource__summ{
+    color:palette(purple,light);
+  }
+}
+
+
