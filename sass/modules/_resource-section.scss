@@ -2,6 +2,7 @@
 *******************************************************/
 .resource-section{
   width: 90%;
+  clear:both;
   @extend %center-align;
 }
 
@@ -19,5 +20,30 @@
 .articles {
   .section__header{
     color:palette(purple);
+  }
+}
+.books {
+  .section__header {
+    color:palette(teal);
+  }
+}
+.tutorials {
+  .section__header {
+    color:palette(red);
+  }
+}
+.podcasts {
+  .section__header {
+    color:palette(blue);
+  }
+}
+.talks {
+  .section__header {
+    color:palette(cyan);
+  }
+}
+.tools {
+  .section__header {
+    color:palette(pink);
   }
 }

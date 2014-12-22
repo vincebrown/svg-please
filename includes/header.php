@@ -1,11 +1,10 @@
-<?php require_once('includes/config.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Svg Please</title>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="dist/css/style.min.css">
+  <link rel="stylesheet" href=<?php echo BASE_URL;?>dist/css/style.min.css>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>

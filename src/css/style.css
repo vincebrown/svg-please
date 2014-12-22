@@ -112,12 +112,12 @@ samp {
   max-width: 1950px;
   position: relative;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 47.5em) {
   .site-wrapper {
     width: 100%;
   }
 }
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 75em) {
   .site-wrapper {
     width: 100%;
   }
@@ -137,22 +137,22 @@ body {
     font-size: 106.3%;
   }
 }
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 35em) {
   body {
     font-size: 112.5%;
   }
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 47.5em) {
   body {
     font-size: 125%;
   }
 }
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 75em) {
   body {
     font-size: 137.5%;
   }
 }
-@media screen and (min-width: 81em) {
+@media screen and (min-width: 110em) {
   body {
     font-size: 150%;
   }
@@ -193,12 +193,12 @@ textarea {
   width: 43%;
   margin: 1em 0 1em 1.3em;
 }
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 35em) {
   .logo {
     width: 35%;
   }
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 47.5em) {
   .logo {
     width: 25%;
     max-width: 325px;
@@ -232,7 +232,7 @@ textarea {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 35em) {
   .main-nav__link--articles, .main-nav__link--books, .main-nav__link--tutorials, .main-nav__link--podcasts, .main-nav__link--talks, .main-nav__link--tools {
     box-sizing: border-box;
     width: 16.66667%;
@@ -378,6 +378,7 @@ header {
 *******************************************************/
 .resource-section {
   width: 90%;
+  clear: both;
 }
 
 .section__header {
@@ -396,7 +397,27 @@ header {
   color: #673AB7;
 }
 
-.resource--article {
+.books .section__header {
+  color: #009688;
+}
+
+.tutorials .section__header {
+  color: #F44336;
+}
+
+.podcasts .section__header {
+  color: #2196F3;
+}
+
+.talks .section__header {
+  color: #00BCD4;
+}
+
+.tools .section__header {
+  color: #E91E63;
+}
+
+.resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
   position: relative;
   overflow: hidden;
   background-color: #fff;
@@ -410,26 +431,33 @@ header {
           transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-@media screen and (min-width: 37.5em) {
-  .resource--article {
+@media screen and (min-width: 35em) {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
     width: 80%;
   }
 }
-@media screen and (min-width: 50em) {
-  .resource--article {
+@media screen and (min-width: 47.5em) {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
     float: left;
     margin-right: 3%;
-    width: 46%;
+    width: 47%;
   }
 }
-@media screen and (min-width: 81em) {
-  .resource--article {
+@media screen and (min-width: 75em) {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
     float: left;
-    width: 30%;
-    margin-right: 3%;
+    width: 31%;
+    margin-right: 2.2%;
   }
 }
-.resource--article:hover {
+@media screen and (min-width: 110em) {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
+    float: left;
+    width: 23%;
+    margin-right: 2%;
+  }
+}
+.resource--article:hover, .resource--book:hover, .resource--tutorial:hover, .resource--podcast:hover, .resource--talk:hover, .resource--tool:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -437,31 +465,35 @@ header {
   list-style-type: none;
   margin-top: 2.25rem;
 }
-@media screen and (min-width: 50em) {
-  .resources li:nth-child(odd) {
+@media screen and (min-width: 47.5em) {
+  .resources li:nth-child(2n+1) {
     clear: both;
   }
-  .resources li:nth-child(even) {
-    margin-right: 0;
+}
+@media screen and (min-width: 75em) {
+  .resources li:nth-child(2n+1) {
+    clear: none;
+  }
+  .resources li:nth-child(3n+1) {
+    clear: both;
   }
 }
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 110em) {
   .resources li:nth-child(3n+1) {
     clear: none;
   }
-}
-@media screen and (min-width: 81em) {
-  .resources li:nth-child(2n+1) {
-    clear: none;
+  .resources li:nth-child(4n+1) {
+    clear: both;
   }
 }
 
 .resource__main-info {
-  padding: 3em 2.25em 2.75em;
+  position: relative;
+  padding: 2.25em 1.8em 2em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .resource__meta {
-  padding: 1em 2.25em;
+  padding: 1em 1.8em;
 }
 .resource__title {
   font-size: 1.3em;
@@ -473,18 +505,32 @@ header {
 .resource__summ {
   font-weight: 300;
   line-height: 1.4;
-  font-size: .9em;
+  font-size: .8em;
 }
-.resource__author {
+.resource__meta-info {
   color: #727272;
   font-weight: 400;
-  font-size: .85em;
+  font-size: .75em;
+  margin-bottom: 1rem;
 }
-.resource__author span {
-  font-size: .85em;
+.resource__meta-info span {
+  font-size: .95em;
   font-weight: inherit;
   display: block;
   color: #212121;
+}
+.resource__recommended {
+  margin-top: .75rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: .6em;
+  text-transform: uppercase;
+  padding: .3rem .7rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 3px 0;
+  color: white;
 }
 
 .resource--article {
@@ -495,4 +541,72 @@ header {
 }
 .resource--article .resource__summ {
   color: #D1C4E9;
+}
+.resource--article .resource__recommended {
+  background-color: #009688;
+}
+
+.resource--book {
+  border-color: #00796B;
+}
+.resource--book .resource__main-info {
+  background-color: #009688;
+}
+.resource--book .resource__summ {
+  color: #B2DFDB;
+}
+.resource--book .resource__recommended {
+  background-color: #673AB7;
+}
+
+.resource--tutorial {
+  border-color: #D32F2F;
+}
+.resource--tutorial .resource__main-info {
+  background-color: #F44336;
+}
+.resource--tutorial .resource__summ {
+  color: #FFCDD2;
+}
+.resource--tutorial .resource__recommended {
+  background-color: #009688;
+}
+
+.resource--podcast {
+  border-color: #1976D2;
+}
+.resource--podcast .resource__main-info {
+  background-color: #2196F3;
+}
+.resource--podcast .resource__summ {
+  color: #BBDEFB;
+}
+.resource--podcast .resource__recommended {
+  background-color: #009688;
+}
+
+.resource--talk {
+  border-color: #0097A7;
+}
+.resource--talk .resource__main-info {
+  background-color: #00BCD4;
+}
+.resource--talk .resource__summ {
+  color: #B2EBF2;
+}
+.resource--talk .resource__recommended {
+  background-color: #009688;
+}
+
+.resource--tool {
+  border-color: #C2185B;
+}
+.resource--tool .resource__main-info {
+  background-color: #E91E63;
+}
+.resource--tool .resource__summ {
+  color: #F8BBD0;
+}
+.resource--tool .resource__recommended {
+  background-color: #009688;
 }

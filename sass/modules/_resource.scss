@@ -1,3 +1,4 @@
+// placeholder resource styles for extending
 %resource{
   position: relative;
   overflow: hidden;
@@ -16,50 +17,66 @@
   @include mq(md) {
     float:left;
     margin-right:3%;
-    width: 46%;
+    width: 47%;
+  }
+  @include mq(lg) {
+    float:left;
+    width: 31%;
+    margin-right:2.2%;
   }
   @include mq(xl) {
-    float:left;
-    width: 30%;
-    margin-right:3%;
+    float: left;
+    width: 23%;
+    margin-right: 2%;
   }
   &:hover {
     @include shadow(z3);
   }
 }
 
+// Clearing floats for grid
 .resources {
   list-style-type: none;
   margin-top:2.25rem;
   li {
     @include mq(md) {
-      &:nth-child(odd){
+      &:nth-child(2n+1){
         clear:both;
-      }
-      &:nth-child(even){
-        margin-right: 0;
       }
     }
     @include mq(lg){
+      &:nth-child(2n+1){
+        clear:none;
+      }
+      &:nth-child(3n+1){
+        clear:both;
+      }
+    }
+    @include mq(xl) {
       &:nth-child(3n+1){
         clear:none;
       }
-    }
-    @include mq(xl){
-      &:nth-child(2n+1){
-        clear:none;
+      &:nth-child(4n+1) {
+        clear:both;
       }
     }
   }
 }
+
+
+
 .resource{
+  // .resource__main-info
   @include e('main-info'){
-    padding: 3em 2.25em 2.75em;
+    position: relative;
+    padding: 2.25em 1.8em 2em;
     @include shadow(z1);
   }
+  // .resource__meta
   @include e('meta'){
-    padding: 1em 2.25em;
+    padding: 1em 1.8em;
   }
+  // .resource__title
   @include e('title') {
     font-size: 1.3em;
     line-height: 1.2;
@@ -67,23 +84,41 @@
     color:white;
     margin-bottom: .25em;
   }
+  // .resource__summ
   @include e('summ'){
     font-weight: $font-weight--light;
     line-height: 1.4;
-    font-size: .9em;
+    font-size: .8em;
   }
-  @include e('author'){
+  // .resource__author
+  @include e('meta-info'){
     color:palette(text,secondary);
     font-weight: $font-weight--norm;
-    font-size: .85em;
+    font-size: .75em;
+    margin-bottom: 1rem;
     span{
-      font-size: .85em;
+      font-size: .95em;
       font-weight: inherit;
       display:block;
       color:palette(text);
     }
   }
+  @include e('recommended') {
+    margin-top: .75rem;
+    font-weight: $font-weight--light;
+    letter-spacing: 2px;
+    font-size: .6em;
+    text-transform: uppercase;
+    padding: .3rem .7rem;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    border-radius: 0 0 3px 0;
+    color:white;
+  }
 }
+
+// Style overides for article resources
 .resource--article {
   @extend %resource;
   border-color: palette(purple,dark);
@@ -93,6 +128,84 @@
   }
   .resource__summ{
     color:palette(purple,light);
+  }
+  .resource__recommended {
+    background-color: palette(teal);
+  }
+}
+// Style overides for book resources
+.resource--book {
+  @extend %resource;
+  border-color: palette(teal,dark);
+
+  .resource__main-info{
+    background-color: palette(teal);
+  }
+  .resource__summ{
+    color:palette(teal,light);
+  }
+  .resource__recommended {
+    background-color: palette(purple);
+  }
+}
+// Style overides for tutorial resources
+.resource--tutorial {
+  @extend %resource;
+  border-color: palette(red,dark);
+
+  .resource__main-info{
+    background-color: palette(red);
+  }
+  .resource__summ{
+    color:palette(red,light);
+  }
+  .resource__recommended {
+    background-color: palette(teal);
+  }
+}
+// Style overides for podcast resources
+.resource--podcast {
+  @extend %resource;
+  border-color: palette(blue,dark);
+
+  .resource__main-info{
+    background-color: palette(blue);
+  }
+  .resource__summ{
+    color:palette(blue,light);
+  }
+  .resource__recommended {
+    background-color: palette(teal);
+  }
+}
+// Style overides for talk resources
+.resource--talk {
+  @extend %resource;
+  border-color: palette(cyan,dark);
+
+  .resource__main-info{
+    background-color: palette(cyan);
+  }
+  .resource__summ{
+    color:palette(cyan,light);
+  }
+  .resource__recommended {
+    background-color: palette(teal);
+  }
+}
+// Style overides for tool resources
+.resource--tool {
+  @extend %resource;
+  border-color: palette(pink,dark);
+
+  .resource__main-info{
+    background-color: palette(pink);
+  }
+  .resource__summ{
+    color:palette(pink,light);
+  }
+  .resource__recommended {
+    background-color: palette(teal);
   }
 }
 

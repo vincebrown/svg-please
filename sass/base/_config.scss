@@ -96,17 +96,17 @@ $trns-time: cubic-bezier(.4,0,.2,1);
 
 // Breakpoints
   // xs    => 320px
-  // sm   => 600px 
-  // md   => 800px
-  // lg     => 1040px
-  // xl     => 1200px
+  // sm   => 560px 
+  // md   => 760px
+  // lg     => 1120px
+  // xl     => 1600px
   
   $break-points: (
     xs  : 20em, 
-    sm : 37.5em,
-    md : 50em,
-    lg   : 65em,
-    xl   : 81em
+    sm : 35em,
+    md : 47.5em,
+    lg   : 75em,
+    xl   : 110em
     );
 
   $material-shadows : (
