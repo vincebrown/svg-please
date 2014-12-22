@@ -72,12 +72,6 @@
     padding: 2.25em 1.8em 2em;
     @include shadow(z1);
   }
-  // .resource__meta
-  @include e('meta'){
-    & > h3{
-      padding: 1em 1.8em;
-    }
-  }
   // .resource__title
   @include e('title') {
     font-size: 1.3em;
@@ -98,6 +92,7 @@
   // .resource__author
   @include e('meta-info'){
     color:palette(text,secondary);
+    padding: 1em 1.8em;
     font-weight: $font-weight--norm;
     font-size: .75em;
     @include mq(lg){
@@ -111,10 +106,9 @@
     }
   }
   @include e('recommended') {
-    margin-top: .75rem;
     font-weight: $font-weight--light;
     letter-spacing: 2px;
-    font-size: .6em;
+    font-size: .5em;
     text-transform: uppercase;
     padding: .3rem .7rem;
     position: absolute;
