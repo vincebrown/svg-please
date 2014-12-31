@@ -89,14 +89,14 @@
       font-size: .7em;
     }
   }
-  // .resource__author
+  // .resource__meta-info
   @include e('meta-info'){
     color:palette(text,secondary);
     padding: 1em 1.8em;
     font-weight: $font-weight--norm;
-    font-size: .75em;
+    font-size: .85em;
     @include mq(lg){
-      font-size: .65em;
+      font-size: .75em;
     }
     span{
       font-size: .95em;
@@ -120,10 +120,11 @@
 }
 
 // Style overides for article resources
-.resource--article {
-  @extend %resource;
-  border-color: palette(purple,dark);
 
+  .resource--article {
+    @extend %resource;
+    border-color: palette(purple,dark);
+  
   .resource__main-info{
     background-color: palette(purple);
   }
@@ -135,10 +136,10 @@
   }
 }
 // Style overides for book resources
-.resource--book {
-  @extend %resource;
-  border-color: palette(teal,dark);
 
+  .resource--book {
+    @extend %resource;
+    border-color: palette(teal,dark);
   .resource__main-info{
     background-color: palette(teal);
   }
@@ -148,14 +149,15 @@
   .resource__recommended {
     background-color: palette(purple);
   }
-  .resource__meta h3:first-child{
+  .resource__meta p:first-child{
     border-bottom:1px solid palette(text,divider);
   }
 }
 // Style overides for tutorial resources
-.resource--tutorial {
-  @extend %resource;
-  border-color: palette(red,dark);
+
+  .resource--tutorial {
+    @extend %resource;
+    border-color: palette(red,dark);
 
   .resource__main-info{
     background-color: palette(red);
@@ -166,15 +168,16 @@
   .resource__recommended {
     background-color: palette(teal);
   }
-  .resource__meta h3:first-child{
+  .resource__meta p:first-child{
     border-bottom:1px solid palette(text,divider);
   }
 }
 // Style overides for podcast resources
-.resource--podcast {
-  @extend %resource;
-  border-color: palette(blue,dark);
 
+  .resource--podcast {
+    @extend %resource;
+    border-color: palette(blue,dark);
+  
   .resource__main-info{
     background-color: palette(blue);
   }
@@ -184,15 +187,16 @@
   .resource__recommended {
     background-color: palette(teal);
   }
-  .resource__meta h3:first-child{
+  .resource__meta p:first-child{
     border-bottom:1px solid palette(text,divider);
   }
 }
 // Style overides for talk resources
-.resource--talk {
-  @extend %resource;
-  border-color: palette(cyan,dark);
 
+  .resource--talk {
+    @extend %resource;
+    border-color: palette(cyan,dark);
+  
   .resource__main-info{
     background-color: palette(cyan);
   }
@@ -202,14 +206,15 @@
   .resource__recommended {
     background-color: palette(teal);
   }
-  .resource__meta h3:first-child{
+  .resource__meta p:first-child{
     border-bottom:1px solid palette(text,divider);
   }
 }
 // Style overides for tool resources
-.resource--tool {
-  @extend %resource;
-  border-color: palette(pink,dark);
+
+  .resource--tool{
+    @extend %resource;
+    border-color: palette(pink,dark);
 
   .resource__main-info{
     background-color: palette(pink);
@@ -220,7 +225,7 @@
   .resource__recommended {
     background-color: palette(teal);
   }
-  .resource__meta h3:first-child{
+  .resource__meta p:first-child{
     border-bottom:1px solid palette(text,divider);
   }
 }

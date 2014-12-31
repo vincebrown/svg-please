@@ -24,3 +24,7 @@
       </nav>
     </header>
     <div class="site-wrapper">
+    <form id="searchform" action="<?php echo BASE_URL;?>search/" method="get">
+      <input type="search" name="phrase" id="phrase" value="<?php echo $_GET['phrase']; ?>">
+      <input type="submit" value="search">
+    </form>
