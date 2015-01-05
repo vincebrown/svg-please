@@ -1,13 +1,14 @@
 <?php 
+require_once("../includes/config.php");
 // check to see if the user is logged in ]
-session_start();
+
 if ($_SESSION['loggedin'] != true) {
   // kick them out
   header('Location:login.php');
   // stop this file from loading
   die(' You do not have permission to view this page');
 }
-require_once("../includes/config.php");
+
 
 include(ROOT_PATH . "includes/resources.php");
 
@@ -21,7 +22,6 @@ $tool_resources = get_resource_by_type('tool');
 
 include(ROOT_PATH . 'includes/header.php');?>
 
-<a href="login.php?action=logout">Logout</a>
 <section class="resource-section articles">
   <h2 class="section__header">Articles</h2>
   <p class="section__summary">Articles that have been written about SVG.</p>

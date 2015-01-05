@@ -1,10 +1,8 @@
 <?php
 //opens or resumes a session
-session_start(); 
-
 require("../includes/config.php");
 require(ROOT_PATH . "includes/database.php");
-include(ROOT_PATH . "includes/functions.php");
+
 //parse the form if it was submitted
 if( $_POST['did_login'] == true ){
   //extract the user submitted data
@@ -50,7 +48,7 @@ if( $_POST['did_login'] == true ){
       // TODO: Make these cookies more secure.
       
       // Success remember user for 1 week
-      setcookie( 'loggedin', true, time() + 60 * 60 * 24 * 7 );
+      setcookie( 'loggedin', true, time() + 60 * 60 * 24 * 7, "/" );
       $_SESSION['loggedin'] = true;
       
       // // Who is logged in?
@@ -58,7 +56,7 @@ if( $_POST['did_login'] == true ){
       $user_id = $row['user_id'];
 
       // Set Cookie for Logged in User
-      setcookie( 'user_id', $user_id, time() + 60 * 60 * 24 * 7 );
+      setcookie( 'user_id', $user_id, time() + 60 * 60 * 24 * 7, "/" );
       $_SESSION['user_id'] = $user_id;
 
       // Redirect to homepage
@@ -87,11 +85,11 @@ if( $_GET['action'] == 'logout' ){
   //remove all the session vars we created
   unset( $_SESSION['loggedin'] );
   //set cookies to null
-  setcookie( 'loggedin', '' );
+  setcookie( 'loggedin', '', time() - 42000, '/' );
 
   unset( $_SESSION['user_id']);
 
-  setcookie('user_id', '');
+  setcookie('user_id', '', time() - 42000, '/');
 }
 // if the user returns to this file and is still logged in (cookie still valid), re-create the session and then redirect to admin.
 elseif( $_COOKIE['loggedin'] == true ){

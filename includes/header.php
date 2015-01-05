@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Svg Please</title>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href=<?php echo BASE_URL;?>dist/css/style.min.css>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="<?php echo BASE_URL;?>dist/css/style.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
   
@@ -15,15 +15,18 @@
       </div>
       <a href="#" class="btn-contrib ripple" data-ripple-color="#BBDEFB" >VIEW CONTRIBUTORS</a>
       <nav class="main-nav">
-        <a href="http://www.google.com" class="main-nav__link--articles ripple" data-ripple-color="#D1C4E9" >Articles</a>
-        <a href="#" class="main-nav__link--books ripple" data-ripple-color="#B2DFDB">Books</a>
-        <a href="#" class="main-nav__link--tutorials ripple" data-ripple-color="#FFCDD2">Tutorials</a>
-        <a href="#" class="main-nav__link--podcasts ripple" data-ripple-color="#BBDEFB">Podcasts</a>
-        <a href="#" class="main-nav__link--talks ripple" data-ripple-color="#B2EBF2">Talks</a>
-        <a href="#" class="main-nav__link--tools ripple" data-ripple-color="#F8BBD0">Tools</a>
+        <a href=":;javascript" data-link-name="article" class="main-nav__link--articles ripple" data-ripple-color="#D1C4E9" >Articles</a>
+        <a href=":;javascript" data-link-name="book" class="main-nav__link--books ripple" data-ripple-color="#B2DFDB">Books</a>
+        <a href=":;javascript" data-link-name="tutorial" class="main-nav__link--tutorials ripple" data-ripple-color="#FFCDD2">Tutorials</a>
+        <a href=":;javascript" data-link-name="podcast" class="main-nav__link--podcasts ripple" data-ripple-color="#BBDEFB">Podcasts</a>
+        <a href=":;javascript" data-link-name="talk" class="main-nav__link--talks ripple" data-ripple-color="#B2EBF2">Talks</a>
+        <a href=":;javascript" data-link-name="tool" class="main-nav__link--tools ripple" data-ripple-color="#F8BBD0">Tools</a>
       </nav>
     </header>
     <div class="site-wrapper">
+    <?php if ($_SESSION['loggedin']): ?>
+      <a href="<?php echo BASE_URL; ?>admin/login.php?action=logout">Logout</a>
+    <?php endif ?>
     <form id="searchform" action="<?php echo BASE_URL;?>search/" method="get">
       <input type="search" name="phrase" id="phrase" value="<?php echo $_GET['phrase']; ?>">
       <input type="submit" value="search">

@@ -1,11 +1,18 @@
-<?php
+<?php 
 require_once("../includes/config.php");
+
+/* This file contains instructions for 2 different states of the form:
+ *   - Handling a form submission and ...
+ *       - ... displaying the results if matches are found.
+ *       - ... displaying a "no results found" message if necessary.
+ */
 
 // check to make sure a phrase is set
 if (isset($_GET["phrase"])) {
   $phrase = trim($_GET["phrase"]);
 
-  // if phrase is not empy run get_resources_search()
+  // if a non-blank search term is specified in
+  // the query string, perform a search ( run get_resources_search() )
   if ($phrase != "") {
     require_once(ROOT_PATH . "includes/resources.php");
     $resources = get_resources_search($phrase);
@@ -15,7 +22,7 @@ if (isset($_GET["phrase"])) {
 include(ROOT_PATH . 'includes/header.php');
 ?>
 
-<section class="resource-section articles">
+<section class="resource-section results">
   <h2 class="section__header">Search Results</h2>
   <p class="section__summary">These are all the Results that pertain to your search of <?php echo $phrase; ?></p>
   <ul class="resources">

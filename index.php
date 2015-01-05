@@ -13,7 +13,7 @@ $tool_resources = get_resource_by_type('tool');
 
 include(ROOT_PATH . 'includes/header.php');?>
 
-
+<div class="inner-wrap">
 <section class="resource-section articles">
   <h2 class="section__header">Articles</h2>
   <p class="section__summary">Articles that have been written about SVG.</p>
@@ -85,6 +85,6 @@ include(ROOT_PATH . 'includes/header.php');?>
     ?>
   </ul>
 </section>
-
+</div>
 
 <?php include(ROOT_PATH . 'includes/footer.php') ?>
