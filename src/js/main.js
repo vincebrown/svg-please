@@ -36,7 +36,8 @@
   var partialLink = $(this).attr("data-link-name");
   $.ajax({
     type: "GET",
-    url: "includes/partial-results-" + partialLink + ".html.php",
+    // gives wrong path on logged in pages
+    url: "http://localhost/svg-please/includes/partial-results-" + partialLink + ".html.php",
     dataType: "html",
     success: function(response) {
       $('.inner-wrap').html(response);

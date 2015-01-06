@@ -21,7 +21,7 @@ if (isset($_GET["phrase"])) {
 
 include(ROOT_PATH . 'includes/header.php');
 ?>
-
+<div class="inner-wrap">
 <section class="resource-section results">
   <h2 class="section__header">Search Results</h2>
   <p class="section__summary">These are all the Results that pertain to your search of <?php echo $phrase; ?></p>
@@ -45,7 +45,7 @@ include(ROOT_PATH . 'includes/header.php');
     ?>
   </ul>
 </section>
-
+</div>
 
 
 

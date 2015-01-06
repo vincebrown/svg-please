@@ -60,6 +60,7 @@ if( $_POST['did_login'] == true ){
       $_SESSION['user_id'] = $user_id;
 
       // Redirect to homepage
+      // This redirect??????
       header('Location:index.php');
     }else{
       $message = 'Your username and password combination is incorrect';
