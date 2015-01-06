@@ -417,7 +417,7 @@ header {
   color: #E91E63;
 }
 
-.resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
+.resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
   position: relative;
   overflow: hidden;
   background-color: #fff;
@@ -432,32 +432,32 @@ header {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 @media screen and (min-width: 35em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
     width: 80%;
   }
 }
 @media screen and (min-width: 47.5em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
     float: left;
     margin-right: 3%;
     width: 47%;
   }
 }
 @media screen and (min-width: 75em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
     float: left;
     width: 31%;
     margin-right: 2.2%;
   }
 }
 @media screen and (min-width: 110em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
     float: left;
     width: 23%;
     margin-right: 2%;
   }
 }
-.resource--article:hover, .resource--book:hover, .resource--tutorial:hover, .resource--podcast:hover, .resource--talk:hover, .resource--tool:hover {
+.resource--article:hover, .resource--book:hover, .resource--tutorial:hover, .resource--podcast:hover, .resource--talk:hover, .resource--tool:hover, .resource--add:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -630,4 +630,18 @@ header {
 }
 .resource--tool .resource__meta p:first-child {
   border-bottom: 1px solid #B6B6B6;
+}
+
+.resource--add .resource__title {
+  color: #212121;
+}
+.resource--add label {
+  font-size: .6em;
+  color: #727272;
+  display: block;
+  font-weight: 300;
+}
+.resource--add input {
+  display: block;
+  margin-bottom: 1.5em;
 }

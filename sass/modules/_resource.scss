@@ -231,3 +231,21 @@
 }
 
 
+.resource--add{
+  @extend %resource;
+
+  .resource__title{
+    color:palette(text,primary);
+  }
+
+  label{
+    font-size: .6em;
+    color:palette(text,secondary);
+    display: block;
+    font-weight: $font-weight--light;
+  }
+  input{
+    display: block;
+    margin-bottom: 1.5em;
+  }
+}
