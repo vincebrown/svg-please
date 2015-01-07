@@ -135,26 +135,10 @@ function add_resource_by_type($parsed_data){
         //run insert
         $contributor_insert -> execute();
 
-        // fetch new contributors user_id
+        // fetch new contributors contributor_id
+        $new_id = $db-> lastInsertId();
 
-        // prepare query
-        $new_contributor_id = $db -> prepare(
-          "SELECT contributor_id
-           FROM contributors
-           WHERE contributor_id = :gh_username");
-
-        // bind params
-        $new_contributor_id -> bindParam(':gh_username', $parsed_data['gh_username']);
-
-        // run query
-        $new_contributor_id -> execute();
-
-        // fetch newly added contributors , contributor_id
-
-        $get_contributors_id = $db -> fetch(PDO::FETCH_ASSOC);
-
-        $new_id = $get_contributors_id['contributor_id'];
-
+        
         // prepare resource insert
         $new_resource = $db -> prepare(
          "INSERT INTO resources(type, link, title, summary, author, publisher, location, tech, contributor_id )
@@ -189,3 +173,23 @@ $updated_resources = get_resource_by_type($parsed_data['type']);
 return $updated_resources;
 
 } // end function
+
+
+
+function get_contributors(){
+  require(ROOT_PATH . "includes/database.php");
+
+  try {
+    $contrib_query = $db -> prepare(
+      "SELECT * 
+       FROM contributors
+       ORDER BY contributor_id ASC ");
+    $contrib_query -> execute();
+
+  } catch (Exception $e) {
+    echo "Data could not be retrieved from the database.";
+    exit;
+  }
+  $contributors = $contrib_query -> fetchAll(PDO::FETCH_ASSOC);
+  return $contributors;
+}
