@@ -5,6 +5,7 @@ include(ROOT_PATH . "includes/resources.php");
 
 // fetch all resources by type.
 $podcast_resources = get_resource_by_type('podcast');
+include(ROOT_PATH . "includes/header.php");
 ?>
 <section class="resource-section podcasts">
   <h2 class="section__header">Podcasts</h2>
@@ -17,3 +18,6 @@ $podcast_resources = get_resource_by_type('podcast');
     ?>
   </ul>
 </section>
+<?php 
+include(ROOT_PATH . "includes/footer.php");
+ ?>

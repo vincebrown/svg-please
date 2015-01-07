@@ -31,17 +31,34 @@
 });
 
 
- $('.main-nav a').click(function(e){
-  e.preventDefault();
-  var partialLink = $(this).attr("data-link-name");
-  $.ajax({
-    type: "GET",
-    // gives wrong path on logged in pages
-    url: "http://localhost/svg-please/includes/partial-results-" + partialLink + ".html.php",
-    dataType: "html",
-    success: function(response) {
-      $('.inner-wrap').html(response);
-     //alert(response);
-    }
-  });
+ $(function(){
+
+    // Used to detect initial (useless) popstate.
+    // If history.state exists, pushState() has created the current entry so we can
+    // assume browser isn't going to fire initial popstate
+    var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
+
+    var ajaxLoadPage = function (url) {
+        $('body').load(url);
+    };
+
+    // Handle click event of all links with href not starting with http, https or #
+    $('[^href=main-nav__link]').on('click', function(e){
+
+        e.preventDefault();
+        var href = $(this).attr('href');
+        ajaxLoadPage(href);
+        history.pushState({page:href}, null, href);
+
+    });
+
+    $(window).bind('popstate', function(event){
+        // Ignore inital popstate that some browsers fire on page load
+        var initialPop = !popped && location.href == initialURL;
+        popped = true;
+        if (initialPop) return;
+        // By the time popstate has fired, location.pathname has been changed
+        ajaxLoadPage(location.pathname);
+    });
+
 });

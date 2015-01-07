@@ -3,6 +3,7 @@
 // resources.php contains all models
 include(ROOT_PATH . "includes/resources.php");
 
+include(ROOT_PATH . "includes/header.php");
 // fetch all resources by type.
 $article_resources = get_resource_by_type('article');
 ?>
@@ -17,3 +18,6 @@ $article_resources = get_resource_by_type('article');
     ?>
   </ul>
 </section>
+<?php 
+include(ROOT_PATH . "includes/footer.php");
+?>
