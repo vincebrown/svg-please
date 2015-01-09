@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Svg Please</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="<?php echo BASE_URL;?>dist/css/style.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

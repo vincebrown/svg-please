@@ -76,7 +76,7 @@ $('.delete').click(function(){
   var parent = $(this).parent().parent();
   var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
 
-  $.post('http://localhost/svg-please/includes/delete-resource.php', {id:del_id},function(data){
+  $.post('/includes/delete-resource.php', {id:del_id},function(data){
       parent.addClass('remove-resource').one(transitionEnd, function(){
       parent.remove();
     }); // end addClass
@@ -92,7 +92,7 @@ $('.favorite').click(function(){
   var recommendedParent = $(this).parent().siblings('.resource__link');
   var recommended = recommendedParent.find('.resource__recommended');
   var recommendHtml = '<div class="resource__recommended">RECOMMENDED</div>';
-  $.post('http://localhost/svg-please/includes/recommend-resource.php', {id:update_id},function(data){
+  $.post('/includes/recommend-resource.php', {id:update_id},function(data){
       if (recommended.length ) {
        recommended.remove();
       } else {
