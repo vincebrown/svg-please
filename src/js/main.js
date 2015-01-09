@@ -89,15 +89,38 @@ $('.favorite').click(function(){
   var update_id = $(this).attr('data-resource-id');
   // get parent 
   var parent = $(this).parent().parent();
-
+  var recommendedParent = $(this).parent().siblings('.resource__link');
+  var recommended = recommendedParent.find('.resource__recommended');
   var recommendHtml = '<div class="resource__recommended">RECOMMENDED</div>';
-
   $.post('http://localhost/svg-please/includes/recommend-resource.php', {id:update_id},function(data){
-      if (parent.find('.resource__recommended') ) {
-        console.log(yes);
+      if (recommended.length ) {
+       recommended.remove();
       } else {
-        console.log('no');
-        // parent.append(recommendHtml);
+       recommendedParent.append(recommendHtml);
       }
   }); // end post
 }); // end function
+
+
+
+$('#search-icon').on('click',function(){
+  
+  $('.search-bar-cont').css({
+    'position': 'absolute',
+    'left': 0,
+    'opacity': 1,
+    'width': '100%',
+    'height': 150,
+    'z-index': 1000
+  });  
+  $('.search-bar').css({
+    'display': 'inline',
+    'width': '90%',
+    'opacity': 1,
+    'z-index': 1000
+  });
+
+  $('.search-bar').focus();
+
+  $('.search-bar-cont').addClass('resource--article');
+});

@@ -1,9 +1,21 @@
 #searchform {
   display:inline;
 }
+.search-bar-cont{
+  display: inline;
+}
 .search-bar {
-  display:none;
-  padding:.5em 0;
+  font-size: 48px;
+  opacity:0;
+  height:175px;
+  width: 0;
+ line-height: 2;
+ outline: none; 
+ border: none;
+ height: 2em;
+}
+.icon-cont{
+  display:inline;
 }
 #search-icon {
   display:inline-block;

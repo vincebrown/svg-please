@@ -149,4 +149,7 @@ module.exports = function(grunt) {
   // ===========================================================================
   grunt.registerTask('default', ['jshint', 'uglify', 'sass','autoprefixer',  'cssmin', 'imagemin']);
   grunt.registerTask('svg', ['svgstore']);
+  grunt.registerTask('scripts', ['uglify']);
+  grunt.registerTask('styles', ['sass','autoprefixer','cssmin']);
+
 };

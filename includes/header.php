@@ -16,16 +16,20 @@
       <a href="<?php echo BASE_URL;?>"><img src="<?php echo BASE_URL;?>dist/svg/svg-please-logo.svg" alt="Svg Please"></a>
     </div>
     <div class="search-wrap">
+   
     <form id="searchform" action="<?php echo BASE_URL;?>search/" method="get">
-      <input type="search" name="phrase" class="search-bar" id="phrase" value="<?php echo $_GET['phrase']; ?>">
-      <input id="search-submit" type="submit" value="search">
-      <a href="javascript:void(0)">
+    <div class="search-bar-cont">
+    <a class="icon-cont" href="javascript:void(0)">
       <svg id ="search-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
         <path fill ="black" opacity=".54"  d="M22.857,20.114h-1.463l-0.549-0.549c1.829-2.011,2.926-4.754,2.926-7.68C23.771,5.303,18.469,0,11.886,0S0,5.303,0,11.886
         s5.303,11.886,11.886,11.886c2.926,0,5.669-1.097,7.68-2.926l0.549,0.549v1.463L29.257,32L32,29.257L22.857,20.114z M11.886,20.114
         c-4.571,0-8.229-3.657-8.229-8.229s3.657-8.229,8.229-8.229s8.229,3.657,8.229,8.229S16.457,20.114,11.886,20.114z"/>
       </svg>
       </a>
+      <input type="search" name="phrase"  class="search-bar" id="phrase" value="<?php echo $_GET['phrase']; ?>" autofocus>
+</div>
+      
+      
     </form>
 
     <a href="<?php echo BASE_URL; ?>contributors/" class="btn-contrib ripple" data-ripple-color="#BBDEFB" >VIEW CONTRIBUTORS</a>
