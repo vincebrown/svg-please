@@ -15,10 +15,16 @@
 }
 
 .btn-contrib {
+  display:none;
+  @include mq(sm) {
+    display: block;
+    min-width: 170px;
+    max-width: 250px;
+  }
   @extend %btn;
+  @extend %center-text;
   margin:1em 1.3em 1em 0;
   background-color: palette(blue);
-  float:right;
   z-index: 3;
   @include shadow(btn-norm);
   &:hover {

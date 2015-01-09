@@ -193,3 +193,4 @@ function get_contributors(){
   $contributors = $contrib_query -> fetchAll(PDO::FETCH_ASSOC);
   return $contributors;
 }
+

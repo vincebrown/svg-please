@@ -71,3 +71,7 @@ textarea {
 }
 
 
+.site-wrapper {
+  width: 90%;
+  @extend %center-align;
+}

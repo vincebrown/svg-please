@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       options: {
         prefix: 'shape-',
         svg: {
-          viewBox: '0 0 50 50',
+          viewBox: '0 0 24 24',
           style: "display:none;"
         }
       },

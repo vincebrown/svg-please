@@ -1,0 +1,27 @@
+#searchform {
+  display:inline;
+}
+.search-bar {
+  display:none;
+  padding:.5em 0;
+}
+#search-icon {
+  display:inline-block;
+  margin-top: 1em;
+  @include mq(sm) {
+    margin-top: 1.3em;
+  }
+  margin-right: 1.2em;
+}
+#search-submit {
+  display:none;
+}
+
+.search-wrap {
+  @extend %clearfix;
+
+  float:right;
+    .btn-contrib {
+      float:right;
+    }
+}

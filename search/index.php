@@ -29,17 +29,17 @@ include(ROOT_PATH . 'includes/header.php');
     <?php 
     foreach($resources as $resource) {
       if ($resource['type'] == 'article') {
-        include(ROOT_PATH . 'includes/partial-resource-article.html.php');
+        include(ROOT_PATH . 'articles/partial-articles.php');
       } elseif ($resource['type'] == 'book') {
-        include(ROOT_PATH . 'includes/partial-resource-book.html.php');
+        include(ROOT_PATH . 'books/partial-books.php');
       } elseif ($resource['type'] == 'tutorial') {
-        include(ROOT_PATH . 'includes/partial-resource-tutorial.html.php');
+        include(ROOT_PATH . 'tutorials/partial-tutorials.php');
       } elseif ($resource['type'] == 'podcast') {
-        include(ROOT_PATH . 'includes/partial-resource-podcast.html.php');
+        include(ROOT_PATH . 'podcasts/partial-podcasts.php');
       } elseif ($resource['type'] == 'talk') {
-        include(ROOT_PATH . 'includes/partial-resource-talk.html.php');
+        include(ROOT_PATH . 'talks/partial-talks.php');
       } elseif ($resource['type'] == 'tool') {
-        include(ROOT_PATH . 'includes/partial-resource-tool.html.php');
+        include(ROOT_PATH . 'tools/partial-tools.php');
       }
     }
     ?>

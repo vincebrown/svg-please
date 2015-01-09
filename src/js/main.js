@@ -30,7 +30,10 @@
     });
 });
 
-
+/*
+ * This handles all ajax requests for navigation
+ * Uses HTML history api
+ */
  $(function(){
 
     // Used to detect initial (useless) popstate.
@@ -39,16 +42,18 @@
     var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
 
     var ajaxLoadPage = function (url) {
-        $('body').load(url);
+      $('body').load(url);
     };
 
-    // Handle click event of all links with href not starting with http, https or #
-    $('[^href=main-nav__link]').on('click', function(e){
+    // Handle click event of all links in header
+    $('header a').on('click', function(e){
 
-        e.preventDefault();
-        var href = $(this).attr('href');
-        ajaxLoadPage(href);
-        history.pushState({page:href}, null, href);
+      e.preventDefault();
+      var href = $(this).attr('href');
+
+      ajaxLoadPage(href);
+
+      history.pushState({page:href}, null, href); 
 
     });
 
@@ -59,6 +64,40 @@
         if (initialPop) return;
         // By the time popstate has fired, location.pathname has been changed
         ajaxLoadPage(location.pathname);
-    });
+      });
 
-});
+  });
+
+
+$('.delete').click(function(){
+  // get resource id to use for deleting
+  var del_id = $(this).attr('data-resource-id');
+  // get parent 
+  var parent = $(this).parent().parent();
+  var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+
+  $.post('http://localhost/svg-please/includes/delete-resource.php', {id:del_id},function(data){
+      parent.addClass('remove-resource').one(transitionEnd, function(){
+      parent.remove();
+    }); // end addClass
+  }); // end post
+}); // end function
+
+
+$('.favorite').click(function(){
+  // get resource id to use for deleting
+  var update_id = $(this).attr('data-resource-id');
+  // get parent 
+  var parent = $(this).parent().parent();
+
+  var recommendHtml = '<div class="resource__recommended">RECOMMENDED</div>';
+
+  $.post('http://localhost/svg-please/includes/recommend-resource.php', {id:update_id},function(data){
+      if (parent.find('.resource__recommended') ) {
+        console.log(yes);
+      } else {
+        console.log('no');
+        // parent.append(recommendHtml);
+      }
+  }); // end post
+}); // end function

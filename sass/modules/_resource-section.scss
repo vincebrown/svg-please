@@ -1,9 +1,7 @@
 /* resource section Styles
 *******************************************************/
 .resource-section{
-  width: 90%;
   clear:both;
-  @extend %center-align;
 }
 
 .section__header{
@@ -45,5 +43,11 @@
 .tools {
   .section__header {
     color:palette(pink);
+  }
+}
+
+.contributors {
+  .section_header {
+    color:palette(text,primary);
   }
 }

@@ -80,7 +80,7 @@ samp {
 
 /* Helper Classes & Extends
 *******************************************************/
-.site-wrapper:after, .main-nav:after {
+.site-wrapper:after, .main-nav:after, .resource__actions-cont:after, .search-wrap:after {
   content: "";
   display: table;
   clear: both;
@@ -97,7 +97,11 @@ samp {
   width: 1px;
 }
 
-.resource-section {
+.btn-contrib {
+  text-align: center;
+}
+
+.site-wrapper {
   margin: 0 auto;
 }
 
@@ -186,11 +190,15 @@ textarea {
   color: #212121;
 }
 
+.site-wrapper {
+  width: 90%;
+}
+
 /* main-nav Styles
 *******************************************************/
 .logo {
   display: inline-block;
-  width: 43%;
+  width: 50%;
   margin: 1em 0 1em 1.3em;
 }
 @media screen and (min-width: 35em) {
@@ -320,11 +328,18 @@ header {
 }
 
 .btn-contrib {
+  display: none;
   margin: 1em 1.3em 1em 0;
   background-color: #2196F3;
-  float: right;
   z-index: 3;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.17), 0 1px 4px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 35em) {
+  .btn-contrib {
+    display: block;
+    min-width: 170px;
+    max-width: 250px;
+  }
 }
 .btn-contrib:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13), 0 1px 4px rgba(0, 0, 0, 0.16);
@@ -377,7 +392,6 @@ header {
 /* resource section Styles
 *******************************************************/
 .resource-section {
-  width: 90%;
   clear: both;
 }
 
@@ -417,8 +431,13 @@ header {
   color: #E91E63;
 }
 
-.resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
+.contributors .section_header {
+  color: #212121;
+}
+
+.resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add, .resource--contributors {
   position: relative;
+  top: 0;
   overflow: hidden;
   background-color: #fff;
   width: 90%;
@@ -432,32 +451,32 @@ header {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 @media screen and (min-width: 35em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add, .resource--contributors {
     width: 80%;
   }
 }
 @media screen and (min-width: 47.5em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add, .resource--contributors {
     float: left;
     margin-right: 3%;
     width: 47%;
   }
 }
 @media screen and (min-width: 75em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add, .resource--contributors {
     float: left;
     width: 31%;
     margin-right: 2.2%;
   }
 }
 @media screen and (min-width: 110em) {
-  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add {
+  .resource--article, .resource--book, .resource--tutorial, .resource--podcast, .resource--talk, .resource--tool, .resource--add, .resource--contributors {
     float: left;
     width: 23%;
     margin-right: 2%;
   }
 }
-.resource--article:hover, .resource--book:hover, .resource--tutorial:hover, .resource--podcast:hover, .resource--talk:hover, .resource--tool:hover, .resource--add:hover {
+.resource--article:hover, .resource--book:hover, .resource--tutorial:hover, .resource--podcast:hover, .resource--talk:hover, .resource--tool:hover, .resource--add:hover, .resource--contributors:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -491,6 +510,13 @@ header {
   position: relative;
   padding: 2.25em 1.8em 2em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.resource__actions-cont {
+  padding-top: 10px;
+}
+.resource__actions-cont svg {
+  float: right;
+  margin-right: 10px;
 }
 .resource__title {
   font-size: 1.2em;
@@ -542,7 +568,8 @@ header {
 .resource--article {
   border-color: #512DA8;
 }
-.resource--article .resource__main-info {
+.resource--article .resource__main-info,
+.resource--article .resource__actions-cont {
   background-color: #673AB7;
 }
 .resource--article .resource__summ {
@@ -551,11 +578,15 @@ header {
 .resource--article .resource__recommended {
   background-color: #009688;
 }
+.resource--article svg {
+  fill: #D1C4E9;
+}
 
 .resource--book {
   border-color: #00796B;
 }
-.resource--book .resource__main-info {
+.resource--book .resource__main-info,
+.resource--book .resource__actions-cont {
   background-color: #009688;
 }
 .resource--book .resource__summ {
@@ -567,11 +598,15 @@ header {
 .resource--book .resource__meta p:first-child {
   border-bottom: 1px solid #B6B6B6;
 }
+.resource--book svg {
+  fill: #B2DFDB;
+}
 
 .resource--tutorial {
   border-color: #D32F2F;
 }
-.resource--tutorial .resource__main-info {
+.resource--tutorial .resource__main-info,
+.resource--tutorial .resource__actions-cont {
   background-color: #F44336;
 }
 .resource--tutorial .resource__summ {
@@ -583,11 +618,15 @@ header {
 .resource--tutorial .resource__meta p:first-child {
   border-bottom: 1px solid #B6B6B6;
 }
+.resource--tutorial svg {
+  fill: #FFCDD2;
+}
 
 .resource--podcast {
   border-color: #1976D2;
 }
-.resource--podcast .resource__main-info {
+.resource--podcast .resource__main-info,
+.resource--podcast .resource__actions-cont {
   background-color: #2196F3;
 }
 .resource--podcast .resource__summ {
@@ -599,11 +638,15 @@ header {
 .resource--podcast .resource__meta p:first-child {
   border-bottom: 1px solid #B6B6B6;
 }
+.resource--podcast svg {
+  fill: #BBDEFB;
+}
 
 .resource--talk {
   border-color: #0097A7;
 }
-.resource--talk .resource__main-info {
+.resource--talk .resource__main-info,
+.resource--talk .resource__actions-cont {
   background-color: #00BCD4;
 }
 .resource--talk .resource__summ {
@@ -615,11 +658,15 @@ header {
 .resource--talk .resource__meta p:first-child {
   border-bottom: 1px solid #B6B6B6;
 }
+.resource--talk svg {
+  fill: #B2EBF2;
+}
 
 .resource--tool {
   border-color: #C2185B;
 }
-.resource--tool .resource__main-info {
+.resource--tool .resource__main-info,
+.resource--tool .resource__actions-cont {
   background-color: #E91E63;
 }
 .resource--tool .resource__summ {
@@ -630,6 +677,9 @@ header {
 }
 .resource--tool .resource__meta p:first-child {
   border-bottom: 1px solid #B6B6B6;
+}
+.resource--tool svg {
+  fill: #F8BBD0;
 }
 
 .resource--add .resource__title {
@@ -644,4 +694,71 @@ header {
 .resource--add input {
   display: block;
   margin-bottom: 1.5em;
+}
+
+.resource--contributors {
+  border-color: #212121;
+}
+
+@-webkit-keyframes removeResource {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  40% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 0;
+    top: 400px;
+  }
+}
+
+@keyframes removeResource {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  40% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 0;
+    top: 400px;
+  }
+}
+.remove-resource {
+  -webkit-animation: removeResource .6s linear forwards;
+          animation: removeResource .6s linear forwards;
+}
+
+#searchform {
+  display: inline;
+}
+
+.search-bar {
+  display: none;
+  padding: .5em 0;
+}
+
+#search-icon {
+  display: inline-block;
+  margin-top: 1em;
+  margin-right: 1.2em;
+}
+@media screen and (min-width: 35em) {
+  #search-icon {
+    margin-top: 1.3em;
+  }
+}
+
+#search-submit {
+  display: none;
+}
+
+.search-wrap {
+  float: right;
+}
+.search-wrap .btn-contrib {
+  float: right;
 }

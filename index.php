@@ -21,7 +21,7 @@ include(ROOT_PATH . 'includes/header.php');?>
     <ul class="resources">
       <?php 
       foreach($article_resources as $resource) {
-        include(ROOT_PATH . 'includes/partial-resource-article.html.php');
+        include(ROOT_PATH . 'articles/partial-articles.php');
       }
       ?>
       <li class="resource--add">
@@ -55,7 +55,7 @@ include(ROOT_PATH . 'includes/header.php');?>
     <ul class="resources">
       <?php 
       foreach($book_resources as $resource) {
-        include(ROOT_PATH . 'includes/partial-resource-book.html.php');
+        include(ROOT_PATH . 'books/partial-books.php');
       }
       ?>
       <li class="resource--add">
@@ -90,7 +90,7 @@ include(ROOT_PATH . 'includes/header.php');?>
     <ul class="resources">
       <?php 
       foreach($tutorial_resources as $resource) {
-        include(ROOT_PATH . 'includes/partial-resource-tutorial.html.php');
+        include(ROOT_PATH . 'tutorials/partial-tutorials.php');
       }
       ?>
       <li class="resource--add">
@@ -125,7 +125,7 @@ include(ROOT_PATH . 'includes/header.php');?>
     <ul class="resources">
       <?php 
       foreach($podcast_resources as $resource) {
-        include(ROOT_PATH . 'includes/partial-resource-podcast.html.php');
+        include(ROOT_PATH . 'podcasts/partial-podcasts.php');
       }
       ?>
       <li class="resource--add">
@@ -160,7 +160,7 @@ include(ROOT_PATH . 'includes/header.php');?>
     <ul class="resources">
       <?php 
       foreach($talk_resources as $resource) {
-        include(ROOT_PATH . 'includes/partial-resource-talk.html.php');
+        include(ROOT_PATH . 'talks/partial-talks.php');
       }
       ?>
       <li class="resource--add">
@@ -195,7 +195,7 @@ include(ROOT_PATH . 'includes/header.php');?>
     <ul class="resources">
       <?php 
       foreach($tool_resources as $resource) {
-        include(ROOT_PATH . 'includes/partial-resource-tool.html.php');
+        include(ROOT_PATH . 'tools/partial-tools.php');
       }
       ?>
       <li class="resource--add">

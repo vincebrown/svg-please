@@ -1,4 +1,4 @@
-<?php require_once("config.php");
+<?php require_once("../includes/config.php");
 
 // resources.php contains all models
 include(ROOT_PATH . "includes/resources.php");
@@ -13,7 +13,7 @@ include(ROOT_PATH . "includes/header.php");
   <ul class="resources">
     <?php 
     foreach($tool_resources as $resource) {
-        include(ROOT_PATH . 'includes/partial-resource-tool.html.php');
+        include('partial-tools.php');
     }
     ?>
   </ul>
