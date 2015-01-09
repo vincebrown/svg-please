@@ -89,11 +89,12 @@ function add_resource_by_type($parsed_data){
 
 
     if ($contrib_row_count > 0) {
+
       // if user already exists fetch data
       $contributor = $check_contributor -> fetch(PDO::FETCH_ASSOC);
-
-      // Set existing users contributor_id to $contributor_id
+            // Set existing users contributor_id to $contributor_id
       $contributor_id = $contributor['contributor_id'];
+
 
       
       // prepare insert statement
@@ -103,7 +104,9 @@ function add_resource_by_type($parsed_data){
 
       // bind params
         $new_resource -> bindParam(':type', $parsed_data['type']);
+
         $new_resource -> bindParam(':link',$parsed_data['link']);
+
         $new_resource -> bindParam(':title',$parsed_data['title']);
         $new_resource -> bindParam(':summary', $parsed_data['summary']);
         $new_resource -> bindParam(':author',$parsed_data['author']);
@@ -115,6 +118,7 @@ function add_resource_by_type($parsed_data){
 
       // run insert
         $new_resource -> execute();
+
 
       // fetch updated resources by type
         $updated_resources = get_resource_by_type($parsed_data['type']);
