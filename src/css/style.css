@@ -262,11 +262,11 @@ header {
   clear: both;
 }
 .main-nav__link--articles {
-  border-color: #673ab7;
+  border-color: #673AB7;
 }
 .main-nav__link--articles:hover {
-  background-color: #673ab7;
-  color: white;
+  background-color: #673AB7;
+  color: #fff;
   font-weight: 400;
 }
 .main-nav__link--books {
@@ -274,39 +274,39 @@ header {
 }
 .main-nav__link--books:hover {
   background-color: #009688;
-  color: white;
+  color: #fff;
   font-weight: 400;
 }
 .main-nav__link--tutorials {
-  border-color: #f44336;
+  border-color: #F44336;
 }
 .main-nav__link--tutorials:hover {
-  background-color: #f44336;
-  color: white;
+  background-color: #F44336;
+  color: #fff;
   font-weight: 400;
 }
 .main-nav__link--podcasts {
-  border-color: #2196f3;
+  border-color: #2196F3;
 }
 .main-nav__link--podcasts:hover {
-  background-color: #2196f3;
-  color: white;
+  background-color: #2196F3;
+  color: #fff;
   font-weight: 400;
 }
 .main-nav__link--talks {
-  border-color: #00bcd4;
+  border-color: #00BCD4;
 }
 .main-nav__link--talks:hover {
-  background-color: #00bcd4;
-  color: white;
+  background-color: #00BCD4;
+  color: #fff;
   font-weight: 400;
 }
 .main-nav__link--tools {
-  border-color: #e91e63;
+  border-color: #E91E63;
 }
 .main-nav__link--tools:hover {
-  background-color: #e91e63;
-  color: white;
+  background-color: #E91E63;
+  color: #fff;
   font-weight: 400;
 }
 
@@ -330,7 +330,7 @@ header {
 .btn-contrib {
   display: none;
   margin: 1em 1.3em 1em 0;
-  background-color: #2196f3;
+  background-color: #2196F3;
   z-index: 3;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.17), 0 1px 4px rgba(0, 0, 0, 0.16);
 }
@@ -370,7 +370,6 @@ header {
             transform: scale(1);
     opacity: 0.4;
   }
-
   to {
     -webkit-transform: scale(100);
             transform: scale(100);
@@ -384,7 +383,6 @@ header {
             transform: scale(1);
     opacity: 0.4;
   }
-
   to {
     -webkit-transform: scale(100);
             transform: scale(100);
@@ -410,7 +408,7 @@ header {
 }
 
 .articles .section__header {
-  color: #673ab7;
+  color: #673AB7;
 }
 
 .books .section__header {
@@ -418,19 +416,19 @@ header {
 }
 
 .tutorials .section__header {
-  color: #f44336;
+  color: #F44336;
 }
 
 .podcasts .section__header {
-  color: #2196f3;
+  color: #2196F3;
 }
 
 .talks .section__header {
-  color: #00bcd4;
+  color: #00BCD4;
 }
 
 .tools .section__header {
-  color: #e91e63;
+  color: #E91E63;
 }
 
 .contributors .section_header {
@@ -445,7 +443,7 @@ header {
   width: 90%;
   margin: 0 auto;
   list-style-type: none;
-  border-top: 15px solid black;
+  border-top: 15px solid #000000;
   margin-bottom: 1.75rem;
   border-radius: 3px;
   -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -568,120 +566,120 @@ header {
 }
 
 .resource--article {
-  border-color: #512da8;
+  border-color: #512DA8;
 }
 .resource--article .resource__main-info,
 .resource--article .resource__actions-cont {
-  background-color: #673ab7;
+  background-color: #673AB7;
 }
 .resource--article .resource__summ {
-  color: #d1c4e9;
+  color: #D1C4E9;
 }
 .resource--article .resource__recommended {
   background-color: #009688;
 }
 .resource--article svg {
-  fill: #d1c4e9;
+  fill: #D1C4E9;
 }
 
 .resource--book {
-  border-color: #00796b;
+  border-color: #00796B;
 }
 .resource--book .resource__main-info,
 .resource--book .resource__actions-cont {
   background-color: #009688;
 }
 .resource--book .resource__summ {
-  color: #b2dfdb;
+  color: #B2DFDB;
 }
 .resource--book .resource__recommended {
-  background-color: #673ab7;
+  background-color: #673AB7;
 }
 .resource--book .resource__meta p:first-child {
-  border-bottom: 1px solid #b6b6b6;
+  border-bottom: 1px solid #B6B6B6;
 }
 .resource--book svg {
-  fill: #b2dfdb;
+  fill: #B2DFDB;
 }
 
 .resource--tutorial {
-  border-color: #d32f2f;
+  border-color: #D32F2F;
 }
 .resource--tutorial .resource__main-info,
 .resource--tutorial .resource__actions-cont {
-  background-color: #f44336;
+  background-color: #F44336;
 }
 .resource--tutorial .resource__summ {
-  color: #ffcdd2;
+  color: #FFCDD2;
 }
 .resource--tutorial .resource__recommended {
   background-color: #009688;
 }
 .resource--tutorial .resource__meta p:first-child {
-  border-bottom: 1px solid #b6b6b6;
+  border-bottom: 1px solid #B6B6B6;
 }
 .resource--tutorial svg {
-  fill: #ffcdd2;
+  fill: #FFCDD2;
 }
 
 .resource--podcast {
-  border-color: #1976d2;
+  border-color: #1976D2;
 }
 .resource--podcast .resource__main-info,
 .resource--podcast .resource__actions-cont {
-  background-color: #2196f3;
+  background-color: #2196F3;
 }
 .resource--podcast .resource__summ {
-  color: #bbdefb;
+  color: #BBDEFB;
 }
 .resource--podcast .resource__recommended {
   background-color: #009688;
 }
 .resource--podcast .resource__meta p:first-child {
-  border-bottom: 1px solid #b6b6b6;
+  border-bottom: 1px solid #B6B6B6;
 }
 .resource--podcast svg {
-  fill: #bbdefb;
+  fill: #BBDEFB;
 }
 
 .resource--talk {
-  border-color: #0097a7;
+  border-color: #0097A7;
 }
 .resource--talk .resource__main-info,
 .resource--talk .resource__actions-cont {
-  background-color: #00bcd4;
+  background-color: #00BCD4;
 }
 .resource--talk .resource__summ {
-  color: #b2ebf2;
+  color: #B2EBF2;
 }
 .resource--talk .resource__recommended {
   background-color: #009688;
 }
 .resource--talk .resource__meta p:first-child {
-  border-bottom: 1px solid #b6b6b6;
+  border-bottom: 1px solid #B6B6B6;
 }
 .resource--talk svg {
-  fill: #b2ebf2;
+  fill: #B2EBF2;
 }
 
 .resource--tool {
-  border-color: #c2185b;
+  border-color: #C2185B;
 }
 .resource--tool .resource__main-info,
 .resource--tool .resource__actions-cont {
-  background-color: #e91e63;
+  background-color: #E91E63;
 }
 .resource--tool .resource__summ {
-  color: #f8bbd0;
+  color: #F8BBD0;
 }
 .resource--tool .resource__recommended {
   background-color: #009688;
 }
 .resource--tool .resource__meta p:first-child {
-  border-bottom: 1px solid #b6b6b6;
+  border-bottom: 1px solid #B6B6B6;
 }
 .resource--tool svg {
-  fill: #f8bbd0;
+  fill: #F8BBD0;
 }
 
 .resource--add .resource__title {
@@ -707,11 +705,9 @@ header {
     opacity: 1;
     top: 0;
   }
-
   40% {
     opacity: .3;
   }
-
   100% {
     opacity: 0;
     top: 400px;
@@ -723,11 +719,9 @@ header {
     opacity: 1;
     top: 0;
   }
-
   40% {
     opacity: .3;
   }
-
   100% {
     opacity: 0;
     top: 400px;
@@ -749,9 +743,9 @@ header {
 .search-bar {
   font-size: 48px;
   opacity: 0;
-  height: 175px;
+  height: 250px;
   width: 0;
-  line-height: 2;
+  line-height: 2.5;
   outline: none;
   border: none;
   height: 2em;
@@ -763,7 +757,7 @@ header {
 
 #search-icon {
   display: inline-block;
-  margin-top: 1em;
+  margin-top: .8em;
   margin-right: 1.2em;
 }
 @media screen and (min-width: 35em) {

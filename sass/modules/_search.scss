@@ -7,9 +7,9 @@
 .search-bar {
   font-size: 48px;
   opacity:0;
-  height:175px;
+  height:250px;
   width: 0;
- line-height: 2;
+ line-height: 2.5;
  outline: none; 
  border: none;
  height: 2em;
@@ -19,7 +19,7 @@
 }
 #search-icon {
   display:inline-block;
-  margin-top: 1em;
+  margin-top: .8em;
   @include mq(sm) {
     margin-top: 1.3em;
   }
